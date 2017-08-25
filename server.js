@@ -8,8 +8,8 @@ const mongodb = require('mongodb');
 const path = require('path');
 
 var app = express();
-// app.use(helmet());
-// app.use(bodyParser.json());
+app.use(helmet());
+app.use(bodyParser.json());
 
 app.use('/static_files', express.static(path.join(__dirname, 'static_files')));
 
